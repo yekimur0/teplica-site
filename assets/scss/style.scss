@@ -1,0 +1,18 @@
+/*!
+Theme Name: teplica-site
+Version: 1.0
+Author: @pae0112
+Author URI: https://github.com/pae0112
+*/
+
+@use "default/reset";
+@use "default/fonts";
+//@use "default/mixins";
+@use "default/base";
+@use "default/text";
+@use "library/tailselect";
+
+@use "components/header";
+@use "components/blog";
+
+@use "templates/home";

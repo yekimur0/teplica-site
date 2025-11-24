@@ -1,0 +1,73 @@
+@use "mixins" as *;
+@use "../variables" as *;
+
+a {
+  text-decoration: unset;
+  transition:      $transition color;
+  color:           black;
+
+  &[href^=tel] {
+    white-space: nowrap;
+  }
+}
+
+p {
+  font-size:   16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size:      48px;
+  line-height:    120%;
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.default-separator {
+  padding: 12px 0;
+}
+
+h2 {
+  font-size:      36px;
+  line-height:    140%;
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size:   24px;
+  line-height: 140%;
+
+  @include mobile {
+    font-size: 22px;
+  }
+}
+
+h4 {
+  font-size:   18px;
+  line-height: 140%;
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+h5 {
+  font-size:   16px;
+  line-height: 140%;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}

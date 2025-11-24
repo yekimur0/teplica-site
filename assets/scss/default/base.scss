@@ -1,0 +1,20 @@
+@use "mixins" as *;
+@use "../variables" as *;
+
+html {
+  background-color: white;
+  scroll-behavior:  smooth;
+  height:           100%;
+}
+
+body {
+  font-family: $font-family;
+  color:       $chernyy;
+  font-style:  normal;
+}
+
+.container {
+  padding:       0 20px;
+  width:         1520px;
+  margin-inline: auto;
+}
