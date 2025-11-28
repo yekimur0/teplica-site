@@ -4,7 +4,11 @@
 a {
   text-decoration: unset;
   transition:      $transition color;
-  color:           black;
+  color:           $chernyy;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
 
   &[href^=tel] {
     white-space: nowrap;
@@ -23,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size:      48px;
-  line-height:    120%;
+  line-height:    100%;
   text-transform: uppercase;
 
   @include mobile {

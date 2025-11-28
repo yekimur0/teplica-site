@@ -5,6 +5,20 @@ const sourcemaps = require( 'gulp-sourcemaps' );
 const csso = require( 'gulp-csso' );
 const uglify = require( 'gulp-uglify' );
 const concat = require( 'gulp-concat' );
+const srcFolder = "./src";
+const buildFolder = "./app";
+const paths = {
+  srcSvg: `${srcFolder}/img/svg/**.svg`,
+  srcImgFolder: `${srcFolder}/img`,
+  buildImgFolder: `${buildFolder}/img`,
+  srcScss: `${srcFolder}/scss/**/*.scss`,
+  buildCssFolder: `${buildFolder}/css`,
+  srcFullJs: `${srcFolder}/js/**/*.js`,
+  srcMainJs: `${srcFolder}/js/main.js`,
+  buildJsFolder: `${buildFolder}/js`,
+  srcPartialsFolder: `${srcFolder}/partials`,
+  resourcesFolder: `${srcFolder}/resources`,
+};
 
 
 async function sass_compile(cb) {
@@ -45,11 +59,24 @@ function minify_js ( cb ) {
 	);
 }
 
+async function webpImages() {
+	const webp = (await import('gulp-webp')).default;
+	return gulp.src(['./assets/images/**/*.{jpg,jpeg,png}'], { encoding: false })
+	  .pipe(webp({
+		quality: 90,
+		method: 6,
+		effort: 4
+	  }))
+	  .pipe(gulp.dest('./assets/images'));
+}
+
 gulp.task( 'sass_compile', sass_compile );
 gulp.task( 'minify_js', minify_js );
-gulp.task( 'build', gulp.series( sass_compile, minify_js ) );
+gulp.task( 'webp', webpImages );
+gulp.task( 'build', gulp.series( sass_compile, minify_js, webpImages ) );
 
 gulp.task( 'watch', function () {
 	gulp.watch( './assets/scss/**/*.scss', gulp.series( sass_compile ) );
 	gulp.watch( './assets/js/*', gulp.series( minify_js ) );
+	gulp.watch('./assets/images/**/*.{jpg,jpeg,png}', webpImages);
 } );

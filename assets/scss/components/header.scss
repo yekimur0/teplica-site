@@ -1,6 +1,120 @@
 @use "../default/mixins" as *;
 @use "../variables" as *;
 
-header{
-
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    &__utility{
+        padding: 10px 0 8px 0;
+        background: $sv-seryy;
+        .utility{
+            &__container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__city{
+                .tail-select{
+                    .tail--search{
+                        font-family: $font-family;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 130%;
+                        color: $chernyy;
+                        padding-right: 28px;
+                        width: 130px;
+                        max-width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+            &__switch{
+                .switch-btns{
+                    &__btn{
+                        width: 245px;
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                    }
+                }
+            }
+            &__contacts{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                justify-content: center;
+                .socials{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 8px;
+                    &__item{
+                        transition: $transition;
+                        &:hover{
+                            opacity: .5;
+                        }
+                    }
+                }
+                .email, .phone{
+                    transition: $transition;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &__menu{
+        padding: 8px 0 10px 0;
+        background: $belyy;
+        .menu__container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .menu{
+                &__menu{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                }
+                &__part{
+                    &-left{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 40px;
+                    }
+                    &-right{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                }
+                &__list{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                }
+                &__item{
+                    font-family: $font-family;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: $chernyy;
+                    transition: $transition;
+                    &:hover, &.active{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }
