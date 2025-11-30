@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             direction: 'horizontal',
             loop: true,
             slidesPerView: 3,
-            loop: true,
             spaceBetween: 20,
 
             // Navigation arrows
@@ -22,6 +21,69 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.hits-button-next',
             },
         })
+    }
+    if(isExist('.additional-products-swiper')){
+        const additionalProductsSwiper = new Swiper('.additional-products-swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 4,
+            spaceBetween: 20,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.additional-products-button-prev',
+                prevEl: '.additional-products-button-next',
+            },
+        })
+    }
+    if(isExist('.blog-swiper')){
+        const blogSwiper = new Swiper('.blog-swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 4,
+            spaceBetween: 20,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.blog-button-prev',
+                prevEl: '.blog-button-next',
+            },
+        })
+    }
+    if(isExist('.slider__container')){
+        let sliders = document.querySelectorAll('.slider__container');
+        sliders.forEach(slider => {
+            let slider_container = slider;
+            slider_container.id = `slider${Math.floor(Math.random() * (0 - 999999)) + 0}`;
+
+            let nextButton = slider.querySelector('.slider__controls .slider-button-next');
+            let prevButton = slider.querySelector('.slider__controls .slider-button-prev');
+
+            if(nextButton) nextButton.id = `next-${slider_container.id}`;
+            if(prevButton) prevButton.id = `prev-${slider_container.id}`;
+            if(slider.classList.contains('two-per-view')){
+                sliderPerView = 2;
+            }else{
+                sliderPerView = 7;
+            }
+
+            new Swiper(slider, {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+                slidesPerView: sliderPerView,
+                spaceBetween: 20,
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: nextButton,
+                    prevEl: prevButton,
+                },
+            })
+        });
+
     }
     if(isExist('.polymap__map')){
         let allPoints = document.querySelectorAll('.map-point');
@@ -91,5 +153,65 @@ document.addEventListener('DOMContentLoaded', () => {
                 activatePoint(pointId);
             }
         })
+    }
+    if(isExist('.lazyvideo')){
+        let videos = document.querySelectorAll('.lazyvideo');
+        videos.forEach(video => {
+            video.addEventListener('click', (e)=>{
+                if(video.querySelector('.video__placeholder')){
+                    let videoSrc = e.target.closest('.lazyvideo').dataset.videoSrc;
+                    video.querySelector('.video__placeholder').remove();
+                    video.insertAdjacentHTML('afterbegin', `<video src="${videoSrc}" autoplay playsinline controls></video>`);
+                }
+            })
+        });
+    }
+    if(isExist('.tabs')){
+        let tabs_modules = document.querySelectorAll('.tabs');
+        tabs_modules.forEach(module => {
+
+            let module_controls_container = module.querySelector('.tabs__controls');
+            let module_controls_items = module_controls_container.querySelectorAll('.tabs__control');
+            let module_tabs_container = module.querySelector('.tabs__tabs');
+            let module_tabs = module_tabs_container.querySelectorAll('.tabs__tab');
+
+            module_controls_items[0].classList.add('active');
+            module_tabs[0].classList.add('active');
+
+            module_controls_items.forEach(item=>{
+                item.addEventListener('click', (e)=>{
+                    let tabId = e.target.closest('.tabs__control').dataset.tabId;
+                    module_controls_items.forEach(item => {
+                        item.classList.remove('active');
+                    })
+                    module_controls_container.querySelector(`[data-tab-id="${tabId}"]`).classList.add('active');
+                    module_tabs.forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+                    module_tabs_container.querySelector(`[data-tab-id="${tabId}"]`).classList.add('active');
+                })
+            })
+        });
+    }
+    // Кнопка "Наверх"
+    if(isExist('#scrollToTop')){
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        // Показываем/скрываем кнопку при прокрутке
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Плавная прокрутка вверх при клике
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
 })

@@ -1,0 +1,158 @@
+@use "../default/mixins" as *;
+@use "../variables" as *;
+
+.footer{
+    background-color: $t-zelenyy;
+    padding: 40px 0;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: row;
+        gap: 75px;
+        .content{
+            &__logo-section{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            &__menu-section{
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+                .menu{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .item{
+                    font-family: $font-family;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: $belyy;
+                    transition: $transition;
+                    &:hover{
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
+    &__contacts{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+        height: 100%;
+        .items__list{
+            display: flex;
+            gap: 8px;
+            &-contacts{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .item{
+                    transition: $transition;
+                    &:hover{
+                        opacity: .5;
+                    }
+                    &__phone{
+                        font-family: $second-family;
+                        font-weight: 600;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        color: $belyy;
+                    }
+                    &__email{
+                        font-family: $font-family;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 130%;
+                        color: $belyy;
+                    }
+                }
+            }
+            .item-socials{
+                transition: $transition;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+        .poweredby{
+            display: flex;
+            gap: 10px;
+            padding-top: 40px;
+            .text{
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 12px;
+                text-align: right;
+                color: $belyy;
+            }
+        }
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        &__item{
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 130%;
+            color: $belyy;
+            &[href]{
+                transition: $transition;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: $t-zelenyy;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+    z-index: 1000;
+    color: $belyy;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        background-color: darken($t-zelenyy, 10%);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+    }
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
