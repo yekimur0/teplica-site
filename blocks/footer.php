@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="footer__contacts">
-                <div class="items__list-contacts">
+                <div class="items__list-contacts ">
                     <a href="tel:+79120616555" class="item item__phone">
                         +7 (912)-061-65-55
                     </a>

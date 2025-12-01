@@ -7,9 +7,15 @@
     left: 0;
     right: 0;
     z-index: 999;
+    &.sticked{
+        box-shadow: 0 1px 14px 0 rgba(47, 47, 47, .15);
+    }
     &__utility{
         padding: 10px 0 8px 0;
         background: $sv-seryy;
+        @include laptop{
+            display: none;
+        }
         .utility{
             &__container{
                 display: flex;
@@ -81,6 +87,9 @@
                     display: flex;
                     gap: 20px;
                     align-items: center;
+                    @include laptop{
+                        display: none;
+                    }
                 }
                 &__part{
                     &-left{
@@ -112,6 +121,70 @@
                     transition: $transition;
                     &:hover, &.active{
                         text-decoration: underline;
+                    }
+                }
+                &__lid{
+                    .btn{
+                        @include laptop-big__1600{
+                            padding-inline: 14px;
+                            padding-block: 8px;
+                        }
+                        svg{
+                            fill: $zelenyy;
+                            color: $zelenyy;
+                        }
+                        &:hover{
+                            --svg-fill: #{$belyy};
+                            svg{
+                                fill: var(--svg-fill, $belyy);
+                                color: var(--svg-fill, $belyy);
+                            }
+                        }
+                    }
+                    .long-text{
+                        display: flex;
+                        @include laptop-big__1600{
+                            display: none;
+                        }
+                    }
+                    .short-icon{
+                        display: none;
+                        @include laptop-big__1600{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+        .dropdown{
+
+            &.active{
+                .dropdown-trigger{
+                    background-color: $zelenyy;
+                }
+            }
+            &-content{
+                width: 490px;
+                @include laptop-big__1600{
+                    width: 290px;
+                }
+                .catalog__list{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .catalog__item{
+                    width: 100%;
+                    padding: 10px;
+                    transition: $transition;
+                    font-family: $second-family;
+                    font-weight: 600;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    color: $chernyy;
+                    &:hover{
+                        background: $sv-seryy;
                     }
                 }
             }

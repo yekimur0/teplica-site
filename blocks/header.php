@@ -60,7 +60,23 @@
                     </a>
                     <div class="menu__menu">
                         <div class="menu__catalog">
-                            <div class="btn catalog__trigger"><svg class="icon" viewBox="0 0 16 10" width="16" height="10"><use href="/assets/images/sprite.svg#menu_burger"></use></svg>Каталог</div>
+                            <div class="dropdown">
+                                <div class="btn dropdown-trigger catalog__trigger">
+                                    <svg class="icon icon-closed" viewBox="0 0 16 10" width="16" height="10"><use href="/assets/images/sprite.svg#menu_burger"></use></svg>
+                                    <svg class="icon icon-opened" width="16" height="10" viewBox="0 0 12 12"><use href="/assets/images/sprite.svg#close"></use></svg>
+                                    Каталог
+                                </div>
+                                <div class="dropdown-content">
+                                    <div class="catalog__list">
+                                        <a class="catalog__item" href="/">Теплицы</a>
+                                        <a class="catalog__item" href="/">Стеклянные теплицы</a>
+                                        <a class="catalog__item" href="/">Беседки</a>
+                                        <a class="catalog__item" href="/">Комплектующие</a>
+                                        <a class="catalog__item" href="/">Парники</a>
+                                        <a class="catalog__item" href="/">Промышленные теплицы</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="menu__list">
                             <a class="menu__item" href="/">Готовые проекты</a>
@@ -84,8 +100,13 @@
                             </svg>
                         </div>
                     </div>
+                    <div class="menu__search-trigger btn desktop-hidden">
+                        <svg class="social-icon" viewBox="0 0 14 14" width="14" height="14">
+                            <use href="/assets/images/sprite.svg#search"></use>
+                        </svg>
+                    </div>
                     <div class="menu__lid">
-                        <a class="btn btn--padding-20 btn--transparent" href="#">Заказать звонок</a>
+                        <a class="btn btn--padding-20 btn--transparent" href="#"><div class="short-icon"><svg class="icon icon-opened" width="20" height="20" viewBox="0 0 20 20"><use href="/assets/images/sprite.svg#phone"></use></svg></div><div class="long-text">Заказать звонок</div></a>
                     </div>
                 </div>
             </div>

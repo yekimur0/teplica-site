@@ -1216,7 +1216,7 @@
                                         </div>
                                     </div>
                                     <div class="submit__btn">
-                                        <button type="submit" class="btn btn--green-light btn--transparent-hover-white">Получить консультацию</button>
+                                        <button type="submit" class="btn btn--green-light btn--transparent-hover-white">Получить цену</button>
                                     </div>
                                 </div>
                             </form>

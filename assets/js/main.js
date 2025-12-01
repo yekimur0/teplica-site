@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('click', (e)=>{
+        if(!e.target.closest('.dropdown')){
+            document.querySelectorAll('.dropdown').forEach(dropdown=>{
+                dropdown.classList.remove('active');
+            })
+        }
+    })
     tail.select('select#city-select', {
         strings: {
             all: "Все",
@@ -12,8 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 20,
+            breakpoints: {
+                991: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+            },
 
             // Navigation arrows
             navigation: {
@@ -27,8 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 4,
+            slidesPerView: 1,
             spaceBetween: 20,
+            breakpoints: {
+                991: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+                1400: {
+                    slidesPerView: 4,
+                }
+            },
 
             // Navigation arrows
             navigation: {
@@ -42,8 +68,19 @@ document.addEventListener('DOMContentLoaded', () => {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 4,
+            slidesPerView: 1,
             spaceBetween: 20,
+            breakpoints: {
+                991: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+                1400: {
+                    slidesPerView: 4,
+                }
+            },
 
             // Navigation arrows
             navigation: {
@@ -64,9 +101,28 @@ document.addEventListener('DOMContentLoaded', () => {
             if(nextButton) nextButton.id = `next-${slider_container.id}`;
             if(prevButton) prevButton.id = `prev-${slider_container.id}`;
             if(slider.classList.contains('two-per-view')){
-                sliderPerView = 2;
+                sliderPerView = 1;
+                breakpointsList = {
+                    1200: {
+                        slidesPerView: 2,
+                    }
+                }
             }else{
-                sliderPerView = 7;
+                sliderPerView = 1;
+                breakpointsList = {
+                    425: {
+                        sliderPerView: 2,
+                    },
+                    991: {
+                        slidesPerView: 3,
+                    },
+                    1200: {
+                        slidesPerView: 5,
+                    },
+                    1400: {
+                        slidesPerView: 7,
+                    }
+                }
             }
 
             new Swiper(slider, {
@@ -74,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 direction: 'horizontal',
                 loop: true,
                 slidesPerView: sliderPerView,
+                breakpoints: breakpointsList,
                 spaceBetween: 20,
 
                 // Navigation arrows
@@ -213,5 +270,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
         });
+    }
+    if(isExist('.dropdown')){
+        let dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click',(e)=>{
+                let isActive = e.target.closest('.dropdown').classList.contains('active');
+                dropdowns.forEach(item=>{
+                    item.classList.remove('active');
+                })
+                if(!isActive){
+                    e.target.closest('.dropdown').classList.add('active');
+                }
+            })
+        });
+    }
+    // Добавляем класс sticked к хедеру при прокрутке
+    if(isExist('.header')){
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 0) {
+                header.classList.add('sticked');
+            } else {
+                header.classList.remove('sticked');
+            }
+        });
+
+        // Проверяем начальную позицию (на случай если страница уже прокручена)
+        if (window.pageYOffset > 0) {
+            header.classList.add('sticked');
+        }
     }
 })
