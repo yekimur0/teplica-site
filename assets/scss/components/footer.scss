@@ -21,12 +21,17 @@
         gap: 75px;
         @include laptop{
             flex-direction: column;
+            gap: 30px;
         }
         .content{
             &__logo-section{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                @include laptop{
+                    flex-direction: row;
+                    gap: 40px;
+                }
             }
             &__menu-section{
                 display: flex;
@@ -64,6 +69,18 @@
                 }
             }
         }
+        .footer__contacts{
+            align-items: flex-start;
+            width: 100%;
+            .items__list-contacts, .items__list{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                .btn{
+                    width: 100%;
+                }
+            }
+        }
     }
     &__contacts{
         display: flex;
@@ -74,10 +91,16 @@
         .items__list{
             display: flex;
             gap: 8px;
+            @include laptop{
+                display: none;
+            }
             &-contacts{
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+                @include laptop{
+                    display: none;
+                }
                 .item{
                     transition: $transition;
                     &:hover{
@@ -110,12 +133,19 @@
             display: flex;
             gap: 10px;
             padding-top: 40px;
+            @include laptop{
+                width: 100%;
+                padding-top: 12px;
+            }
             .text{
                 font-family: $font-family;
                 font-weight: 400;
                 font-size: 12px;
                 text-align: right;
                 color: $belyy;
+                @include laptop{
+                    text-align: left;
+                }
             }
         }
     }

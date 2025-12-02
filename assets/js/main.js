@@ -302,4 +302,43 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('sticked');
         }
     }
+    if(isExist('.menu__search-trigger')){
+        let trigger = document.querySelector('.menu__search-trigger');
+        trigger.addEventListener('click', (e)=>{
+            let state = e.target.closest('.menu__search-trigger').classList.contains('active')?true:false;
+            if(!state){
+                e.target.closest('.menu__part-right').querySelector('.search-module').classList.add('active');
+                e.target.closest('.menu__search-trigger').classList.add('active');
+                document.querySelector('body').classList.add('locked-search');
+            }else{
+                e.target.closest('.menu__part-right').querySelector('.search-module').classList.remove('active');
+                e.target.closest('.menu__search-trigger').classList.remove('active');
+                document.querySelector('body').classList.remove('locked-search');
+            }
+        })
+    }
+    if(isExist('.menu__mobile-menu')){
+        let trigger = document.querySelector('.menu__menu-trigger');
+        trigger.addEventListener('click', (e)=>{
+            let state = e.target.closest('.menu__menu-trigger').classList.contains('active')?true:false;
+            if(!state){
+                e.target.closest('.menu__container').querySelector('.menu__mobile-menu').classList.add('active');
+                e.target.closest('.menu__menu-trigger').classList.add('active');
+                document.querySelector('body').classList.add('locked-menu');
+            }else{
+                e.target.closest('.menu__container').querySelector('.menu__mobile-menu').classList.remove('active');
+                e.target.closest('.menu__menu-trigger').classList.remove('active');
+                document.querySelector('body').classList.remove('locked-menu');
+            }
+        })
+    }
+    if(isExist('[data-fancybox-trigger]')){
+        let fTriggers = document.querySelectorAll('[data-fancybox-trigger]');
+        fTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e)=>{
+                e.preventDefault();
+                Fancybox.show([{src: `${trigger.href}`, type: "inline"}]);
+            })
+        });
+    }
 })

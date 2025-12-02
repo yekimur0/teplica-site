@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 1001;
     &.sticked{
         box-shadow: 0 1px 14px 0 rgba(47, 47, 47, .15);
     }
@@ -24,6 +24,7 @@
                 align-items: center;
             }
             &__city{
+                z-index: 2;
                 .tail-select{
                     .tail--search{
                         font-family: $font-family;
@@ -35,6 +36,9 @@
                         width: 130px;
                         max-width: 100%;
                         text-align: center;
+                    }
+                    [type="checkbox"]{
+                        display: none;
                     }
                 }
             }
@@ -97,12 +101,17 @@
                         flex-direction: row;
                         align-items: center;
                         gap: 40px;
+                        z-index: 1;
                     }
                     &-right{
                         display: flex;
                         flex-direction: row;
                         align-items: center;
                         gap: 20px;
+                        z-index: 1;
+                        @include laptop{
+                            gap: 10px;
+                        }
                     }
                 }
                 &__list{
@@ -125,15 +134,25 @@
                 }
                 &__lid{
                     .btn{
-                        @include laptop-big__1600{
-                            padding-inline: 14px;
-                            padding-block: 8px;
-                        }
                         svg{
                             fill: $zelenyy;
                             color: $zelenyy;
                         }
-                        &:hover{
+                        @include laptop-big__1600{
+                            padding-inline: 14px;
+                            padding-block: 8px;
+                        }
+                        @include laptop{
+                            padding-inline: 8px;
+                            background-color: $sv-seryy;
+                            color: $chernyy;
+                            border: 1px solid $sv-seryy;
+                            svg{
+                                fill: $chernyy;
+                                color: $chernyy;
+                            }
+                        }
+                        @include hover{
                             --svg-fill: #{$belyy};
                             svg{
                                 fill: var(--svg-fill, $belyy);
@@ -154,10 +173,154 @@
                         }
                     }
                 }
+                &__search{
+                    @include laptop{
+                        &:not(.active){
+                            display: none;
+                        }
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        background: $belyy;
+                        width: 100%;
+                        height: 100%;
+                        padding: 20px;
+                        .search__btn{
+                            margin-right: 40px;
+                            padding: 12px;
+                        }
+                    }
+                }
+                &__search-trigger{
+                    padding: 12px;
+                    .icon-close{
+                        display: none;
+                    }
+                    .icon-open{
+                        display: flex;
+                    }
+                    &.active{
+                        position: absolute;
+                        right: 10px;
+                        .icon-close{
+                            display: flex;
+                        }
+                        .icon-open{
+                            display: none;
+                        }
+                    }
+                }
+                &__menu-trigger{
+                    padding: 10px;
+                    margin-left: 10px;
+                    .icon-close{
+                        display: none;
+                    }
+                    .icon-open{
+                        display: flex;
+                    }
+                    &.active{
+                        background-color: $zelenyy;
+                        .icon-close{
+                            display: flex;
+                        }
+                        .icon-open{
+                            display: none;
+                        }
+                    }
+                }
+                &__mobile-menu{
+                    @include laptop__min{
+                        &.active{
+                            display: none;
+                        }
+                    }
+                    display: none;
+                    position: absolute;
+                    height: 100dvh;
+                    overflow-y: auto;
+                    background: #FFF;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    padding-top: 95px;
+                    padding-inline: 10px;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 10px;
+                    &.active{
+                        display: flex;
+                    }
+                    .switch-btns{
+                        flex-direction: column;
+                        width: 100%;
+                        padding-bottom: 10px;
+                        &__btn{
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    .dropdown{
+                        width: 100%;
+                        background-color: #fff;
+                        overflow: auto;
+                        padding-bottom: 10px;
+                        &.active{
+                            position: absolute;
+                            left: 10px;
+                            right: 10px;
+                            width: unset;
+                            bottom: 10px;
+                            top: 95px;
+                            overflow: auto;
+                        }
+                        &-trigger{
+                            width: 100%;
+                        }
+                        &-content{
+                            box-shadow: unset;
+                            width: 100%;
+                            position: static;
+                        }
+                    }
+                    .menu__list{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        width: 100%;
+                        align-items: flex-start;
+                        padding: 0 10px;
+                        padding-bottom: 20px;
+                        .menu__item{
+                            text-decoration: unset;
+                        }
+                    }
+                    .socials{
+                        padding: 0 10px;
+                    }
+                    .contacts__list{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        padding: 0 10px;
+                        gap: 10px;
+                    }
+                    .utility__city{
+                        width: 100%;
+                        padding-top: 10px;
+                        .tail-select{
+                            width: 100%;
+                            background: $sv-seryy;
+                            padding: 8px 28px;
+                            [type="checkbox"]{
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
         }
         .dropdown{
-
             &.active{
                 .dropdown-trigger{
                     background-color: $zelenyy;

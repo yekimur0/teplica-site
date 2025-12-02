@@ -18,7 +18,7 @@
                                 <li>Предлагаем теплицы из поликарбоната и стекла — прочные, долговечные и адаптированные под любой климат</li>
                                 <li>Собственное производство, монтаж, доставка и гарантия до 10 лет</li>
                             </ul>
-                            <a class="btn btn--green-light" href="#">
+                            <a class="btn btn--green-light" href="#popup-consult" data-fancybox-trigger>
                                 Оставить заявку
                             </a>
                         </div>
@@ -384,7 +384,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns">
-                                        <div class="btn btn--green-light">Заказать</div>
+                                        <a href="#popup-calc" data-fancybox-trigger class="btn btn--green-light">Заказать</a>
                                         <div class="btn btn--transparent">Подробнее</div>
                                     </div>
                                 </div>
@@ -409,7 +409,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns">
-                                        <div class="btn btn--green-light">Заказать</div>
+                                        <a href="#popup-calc" data-fancybox-trigger class="btn btn--green-light">Заказать</a>
                                         <div class="btn btn--transparent">Подробнее</div>
                                     </div>
                                 </div>
@@ -434,7 +434,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns">
-                                        <div class="btn btn--green-light">Заказать</div>
+                                        <a href="#popup-calc" data-fancybox-trigger class="btn btn--green-light">Заказать</a>
                                         <div class="btn btn--transparent">Подробнее</div>
                                     </div>
                                 </div>
@@ -459,7 +459,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns">
-                                        <div class="btn btn--green-light">Заказать</div>
+                                        <a href="#popup-calc" data-fancybox-trigger class="btn btn--green-light">Заказать</a>
                                         <div class="btn btn--transparent">Подробнее</div>
                                     </div>
                                 </div>
@@ -600,7 +600,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns single-btn">
-                                        <div class="btn btn--transparent">Заказать</div>
+                                        <a href="#popup-consult" data-fancybox-trigger class="btn btn--transparent">Заказать</a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide additional-products__item">
@@ -619,7 +619,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns single-btn">
-                                        <div class="btn btn--transparent">Заказать</div>
+                                        <a href="#popup-consult" data-fancybox-trigger class="btn btn--transparent">Заказать</a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide additional-products__item">
@@ -638,7 +638,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns single-btn">
-                                        <div class="btn btn--transparent">Заказать</div>
+                                        <a href="#popup-consult" data-fancybox-trigger class="btn btn--transparent">Заказать</a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide additional-products__item">
@@ -657,7 +657,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns single-btn">
-                                        <div class="btn btn--transparent">Заказать</div>
+                                        <a href="#popup-consult" data-fancybox-trigger class="btn btn--transparent">Заказать</a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide additional-products__item">
@@ -676,7 +676,7 @@
                                         </div>
                                     </div>
                                     <div class="item__btns single-btn">
-                                        <div class="btn btn--transparent">Заказать</div>
+                                        <a href="#popup-consult" data-fancybox-trigger class="btn btn--transparent">Заказать</a>
                                     </div>
                                 </div>
                             </div>

@@ -105,7 +105,7 @@ body {
 		padding-inline: 20px;
 	}
 
-	&:hover {
+	@include hover{
 		background: $zelenyy;
 	}
 
@@ -114,7 +114,7 @@ body {
 		color: $chernyy;
 		border: 1px solid $zelenyy;
 
-		&:hover {
+		@include hover{
 			background-color: $zelenyy;
 			color: $belyy;
 		}
@@ -125,7 +125,7 @@ body {
 		color: $belyy;
 		border: 1px solid $zelenyy;
 
-		&:hover {
+		@include hover{
 			background-color: $t-zelenyy;
 			color: $belyy;
 			border: 1px solid $t-zelenyy;
@@ -137,10 +137,22 @@ body {
 		color: $chernyy;
 		border: 1px solid #eaf7f0;
 
-		&:hover {
+		@include hover{
 			background-color: rgba(38, 173, 96, 1);
 			color: $belyy;
 			border: 1px solid rgba(38, 173, 96, 1);
+		}
+	}
+
+	&--gray{
+		background-color: $sv-seryy;
+		color: $chernyy;
+		border: 1px solid $sv-seryy;
+
+		@include hover{
+			background-color: $t-zelenyy;
+			color: $belyy;
+			border: 1px solid $t-zelenyy;
 		}
 	}
 
@@ -149,7 +161,7 @@ body {
 		color: $chernyy;
 		border: 1px solid $belyy;
 
-		&:hover {
+		@include hover{
 			background-color: $zelenyy;
 			color: $belyy;
 			border: 1px solid $zelenyy;
@@ -165,7 +177,7 @@ body {
 	}
 
 	&--transparent-hover-white {
-		&:hover {
+		@include hover{
 			background-color: transparent;
 			color: $belyy;
 			border: 1px solid $belyy;
@@ -350,7 +362,28 @@ input {
 }
 
 .desktop-hidden{
-	@include laptop{
-		display: none;
+	@include laptop__min{
+		display: none!important;
+	}
+}
+
+.locked-search, .locked-menu{
+	overflow: clip;
+}
+.popup{
+	&.popup-consult, &.popup-calc{
+		padding: 0;
+		border-radius: 16px;
+		background-color: transparent;
+		.f-button{
+			&.is-close-button{
+				top: 10px;
+				right: 10px;
+				opacity: .5;
+				@include hover{
+					opacity: 1;
+				}
+			}
+		}
 	}
 }
