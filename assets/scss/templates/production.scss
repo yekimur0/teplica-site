@@ -1,0 +1,392 @@
+@use "../default/mixins" as *;
+@use "../variables" as *;
+
+.production{
+    .hero{
+        &__main{
+            .main{
+                &__text{
+                    padding: 40px 40px 20px 40px;
+                }
+                &__image{
+                    position: relative;
+                    .image-description{
+                        position: absolute;
+                        bottom: 20px;
+                        left: 40px;
+                        width: 330px;
+                        border-radius: 8px;
+                        padding-block: 8px;
+                        padding-inline: 40px;
+                        font-family: $font-family;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 120%;
+                        text-align: center;
+                        color: $belyy;
+                        backdrop-filter: blur(100px);
+                        box-shadow: 0 1px 14px 0 rgba(47, 47, 47, 0.15);
+                        background: rgba(248, 248, 248, 0.2);
+                    }
+                }
+            }
+        }
+    }
+    .catalog{
+        padding: 40px 0;
+        @include laptop{
+            padding: 30px 0;
+        }
+        &-controls{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            &__item{
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                border-radius: 8px;
+                padding-block: 4px;
+                padding-inline: 4px 28px;
+                background: $sv-seryy;
+                transition: $transition;
+                cursor: pointer;
+                &:hover{
+                    background: $zelenyy;
+                    .item{
+                        &__title{
+                            color: $belyy;
+                        }
+                    }
+                }
+                &.active{
+                    background-color: $t-zelenyy;
+                }
+                .item{
+                    &__image{
+                        background-color: $belyy;
+                        padding: 0 10px;
+                        overflow: hidden;
+                        border-radius: 8px;
+                        picture, img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    &__title{
+                        font-family: $second-family;
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: $chernyy;
+                        transition: $transition;
+                    }
+                }
+            }
+        }
+        &-list{
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            &__item{
+                box-shadow: 0 1px 14px 0 rgba(47, 47, 47, 0.15);
+                background: $belyy;
+                border-radius: 16px;
+                .item__image{
+                    border-radius: 16px;
+                    overflow: hidden;
+                    width: 100%;
+                    display: block;
+                    @include laptop{
+                        height: 350px;
+                    }
+                    img, picture{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .item__text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                    padding: 14px 8px 20px 8px;
+                    h3{
+                        font-family: $second-family;
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: $chernyy;
+                    }
+                    p{
+                        font-family: $font-family;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: $seryy-tekst;
+                        height: 50px;
+                        overflow: hidden;
+                        line-clamp: 3;
+                        -webkit-line-clamp: 3;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+                .item__price{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    padding: 0 8px 14px 8px;
+                    .price__discount{
+                        border-radius: 4px;
+                        padding-block: 4px;
+                        padding-inline: 10px;
+                        background: $zelenyy;
+                        width: fit-content;
+                        font-family: $font-family;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: $belyy;
+                    }
+                    .price__price{
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                        .price__value{
+                            font-family: $second-family;
+                            font-weight: 600;
+                            font-size: 24px;
+                            color: $chernyy;
+                        }
+                        .price__crossed{
+                            font-family: $font-family;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 120%;
+                            text-decoration: line-through;
+                            color: $seryy-tekst;
+                        }
+                    }
+                }
+                .item__btns{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 14px;
+                    padding: 0px 8px 8px 8px;
+                    &.single-btn{
+                        grid-template-columns: 1fr;
+                    }
+                    .btn{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &-pagination{
+            width: 100%;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            &__pagination{
+                display: flex;
+                gap: 4px;
+                .pagination-control{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $sv-seryy;
+                    transition: $transition;
+                    svg{
+                        transition: $transition;
+                    }
+                    &:hover{
+                        background-color: $t-zelenyy;
+                        svg{
+                            fill: $belyy;
+                            color: $belyy;
+                        }
+                    }
+                }
+                .pagination-list{
+                    display: flex;
+                    gap: 4px;
+                    &__item{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        background: unset;
+                        font-family: $second-family;
+                        font-weight: 600;
+                        font-size: 18px;
+                        text-align: center;
+                        color: $chernyy;
+                        border-radius: 50%;
+                        transition: $transition;
+                        &:hover{
+                            background-color: $zelenyy;
+                            color: $belyy;
+                        }
+                        &.current{
+                            background: $t-zelenyy;
+                            color: $belyy;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .advantages{
+        padding: 40px 0;
+        @include laptop{
+            padding: 30px 0;
+        }
+        &-list{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            &__item{
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                border-radius: 8px;
+                padding-block: 40px;
+                padding-inline: 20px;
+                background-color: $sv-seryy;
+                .text{
+                    font-family: $second-family;
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: $chernyy;
+                }
+                .icon{
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &:first-child, &:last-child{
+                    background-color: $t-zelenyy;
+                    svg{
+                        fill: $belyy;
+                        stroke: $belyy;
+                    }
+                    .text{
+                        color: $belyy;
+                    }
+                }
+            }
+        }
+    }
+    .interactive{
+        position: relative;
+        padding-bottom: 40px;
+        &-image{
+            position: relative;
+            z-index: 0;
+            picture, img{
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: contain;
+            }
+            &__map{
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                z-index: 1;
+                .point{
+                    position: absolute;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    cursor: pointer;
+                    .text{
+                        opacity: 1;
+                        pointer-events: unset;
+                        transition: $transition;
+                    }
+                    .icon{
+                        svg{
+                            rect{
+                                transition: $transition;
+                            }
+                        }
+                    }
+                    &:not(.active){
+                        .text{
+                            pointer-events: none;
+                            opacity: 0;
+                        }
+                    }
+                    &.active{
+                        cursor: default;
+                        .icon{
+                            svg{
+                                rect{
+                                    &:nth-child(1){
+                                        fill: rgba(38, 173, 96, 0.5);
+                                    }
+                                    &:nth-child(2){
+                                        fill: rgba(38, 173, 96, 0.5);
+                                    }
+                                    &:nth-child(3){
+                                        fill: $belyy;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-text{
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            h2{
+                font-family: $second-family;
+                font-weight: 600;
+                font-size: 34px;
+                text-transform: uppercase;
+                color: $belyy;
+            }
+            p{
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                color: $belyy;
+            }
+        }
+    }
+    .certificates{
+        padding: 40px 0;
+        @include laptop{
+            padding: 30px 0;
+        }
+        .section__title{
+            padding: 0 0 20px 0;
+        }
+    }
+}

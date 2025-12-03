@@ -64,6 +64,19 @@
             }
         }
     }
+    &.title-description{
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+        p{
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: $chernyy;
+            text-transform: none;
+        }
+    }
 }
 .bg--gray{
     background: $sv-seryy;
@@ -577,6 +590,7 @@
                 font-size: 34px;
                 text-transform: uppercase;
                 color: $belyy;
+                line-height: 1;
                 @include laptop-big__1600{
                     font-size: 26px;
                 }
@@ -686,7 +700,7 @@
             }
         }
     }
-    .hits__slider, .additional-products__slider, .blog__slider{
+    .hits__slider, .additional-products__slider, .blog__slider, .catalog-list, .hits__list{
         padding: 20px 0 20px 0;
         .swiper-wrapper{
             overflow: visible;
@@ -1102,10 +1116,16 @@
         }
     }
 }
-.galleries{
+.galleries, .single-slider{
     padding: 60px 0;
     @include laptop{
         padding: 30px 0;
+    }
+    &.no-padding{
+        padding: 0;
+        @include laptop{
+            padding: 0;
+        }
     }
     &__container{
         display: flex;

@@ -154,6 +154,13 @@ body {
 			color: $belyy;
 			border: 1px solid $t-zelenyy;
 		}
+		&.no-hover{
+			@include hover{
+				background-color: $sv-seryy;
+				color: $chernyy;
+				border: 1px solid $sv-seryy;
+			}
+		}
 	}
 
 	&--white {
@@ -385,5 +392,40 @@ input {
 				}
 			}
 		}
+	}
+}
+.breadcrumbs{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	align-items: center;
+	gap: 8px;
+	margin-top: auto;
+	span{
+		font-family: $font-family;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 130%;
+		color: $seryy-tekst;
+		&.separator{
+			color: $chernyy;
+		}
+	}
+	a{
+		font-family: $font-family;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 130%;
+		color: $chernyy;
+		transition: $transition;
+		&:hover{
+			opacity: .5;
+		}
+	}
+}
+.arrow{
+	&-right{
+		transform: rotate(180deg);
 	}
 }

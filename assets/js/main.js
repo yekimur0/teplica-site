@@ -341,4 +341,15 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
+    if(isExist('.interactive-image__map')){
+        let points = document.querySelectorAll('.interactive-image__map .point');
+        points.forEach(point => {
+            point.addEventListener('click', (e)=>{
+                points.forEach(point_to_disable => {
+                    point_to_disable.classList.remove('active');
+                });
+                point.classList.add('active');
+            })
+        });
+    }
 })
