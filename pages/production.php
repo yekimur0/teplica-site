@@ -47,60 +47,62 @@
                         <div class="section__title">
                             <h2>Каталог продукции</h2>
                         </div>
-                        <div class="catalog-controls">
-                            <div class="catalog-controls__item">
-                                <div class="item__image">
-                                    <picture>
-                                        <source media="(max-width: 1200px)" srcset="../assets/images/production-1.webp">
-                                        <img src="../assets/images/production-1.webp" alt="Теплицы из поликарбоната и стекла">
-                                    </picture>
+                        <div class="swiper catalog-controls-swiper">
+                            <div class="catalog-controls swiper-wrapper">
+                                <div class="catalog-controls__item swiper-slide">
+                                    <div class="item__image">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/production-1.webp">
+                                            <img src="../assets/images/production-1.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="item__title">
+                                        Арочные
+                                    </div>
                                 </div>
-                                <div class="item__title">
-                                    Арочные
+                                <div class="catalog-controls__item swiper-slide">
+                                    <div class="item__image">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/production-2.webp">
+                                            <img src="../assets/images/production-2.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="item__title">
+                                        Каплевидные
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="catalog-controls__item">
-                                <div class="item__image">
-                                    <picture>
-                                        <source media="(max-width: 1200px)" srcset="../assets/images/production-2.webp">
-                                        <img src="../assets/images/production-2.webp" alt="Теплицы из поликарбоната и стекла">
-                                    </picture>
+                                <div class="catalog-controls__item swiper-slide">
+                                    <div class="item__image">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/production-3.webp">
+                                            <img src="../assets/images/production-3.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="item__title">
+                                        Прямостенные
+                                    </div>
                                 </div>
-                                <div class="item__title">
-                                    Каплевидные
+                                <div class="catalog-controls__item swiper-slide">
+                                    <div class="item__image">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/production-4.webp">
+                                            <img src="../assets/images/production-4.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="item__title">
+                                        Двухскатные
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="catalog-controls__item">
-                                <div class="item__image">
-                                    <picture>
-                                        <source media="(max-width: 1200px)" srcset="../assets/images/production-3.webp">
-                                        <img src="../assets/images/production-3.webp" alt="Теплицы из поликарбоната и стекла">
-                                    </picture>
-                                </div>
-                                <div class="item__title">
-                                    Прямостенные
-                                </div>
-                            </div>
-                            <div class="catalog-controls__item">
-                                <div class="item__image">
-                                    <picture>
-                                        <source media="(max-width: 1200px)" srcset="../assets/images/production-4.webp">
-                                        <img src="../assets/images/production-4.webp" alt="Теплицы из поликарбоната и стекла">
-                                    </picture>
-                                </div>
-                                <div class="item__title">
-                                    Двухскатные
-                                </div>
-                            </div>
-                            <div class="catalog-controls__item">
-                                <div class="item__image">
-                                    <picture>
-                                        <source media="(max-width: 1200px)" srcset="../assets/images/production-5.webp">
-                                        <img src="../assets/images/production-5.webp" alt="Теплицы из поликарбоната и стекла">
-                                    </picture>
-                                </div>
-                                <div class="item__title">
-                                    Стеклянные
+                                <div class="catalog-controls__item swiper-slide">
+                                    <div class="item__image">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/production-5.webp">
+                                            <img src="../assets/images/production-5.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="item__title">
+                                        Стеклянные
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -606,6 +608,7 @@
                 </div>
                 <div class="interactive-image">
                     <picture>
+                        <source media="(max-width: 991px)" srcset="../assets/images/interactive-1_mobile.webp">
                         <source media="(max-width: 1200px)" srcset="../assets/images/interactive-1.webp">
                         <img src="../assets/images/interactive-1.webp" alt="Теплицы из поликарбоната и стекла">
                     </picture>
@@ -734,6 +737,160 @@
                     </div>
                 </div>
             </section>
+            <section class="price bg--gray">
+                <div class="container">
+                    <div class="price__container">
+                        <div class="image">
+                            <picture>
+                                <source media="(max-width: 1200px)" srcset="../assets/images/price-1.webp">
+                                <img src="../assets/images/price-1.webp" alt="Теплицы из поликарбоната и стекла">
+                            </picture>
+                        </div>
+                        <div class="content">
+                            <div class="description">
+                                <div class="title">Монтаж теплиц</div>
+                                <div class="text">Монтаж теплиц производится опытными сборщиками. Соблюдаем все технологические требования при сборке теплицы</div>
+                            </div>
+                            <div class="price-block">
+                                <div class="price-list">
+                                    <div class="price-list__item">
+                                        <div class="name">
+                                            2 метра (мин.размер)
+                                        </div>
+                                        <div class="value">
+                                            от 6 000 ₽
+                                        </div>
+                                    </div>
+                                    <div class="price-list__item">
+                                        <div class="name">
+                                            4 метра
+                                        </div>
+                                        <div class="value">
+                                            от 7 000 ₽
+                                        </div>
+                                    </div>
+                                    <div class="price-list__item">
+                                        <div class="name">
+                                            6 метра
+                                        </div>
+                                        <div class="value">
+                                            от 8 000 ₽
+                                        </div>
+                                    </div>
+                                    <div class="price-list__item">
+                                        <div class="name">
+                                            8 метра
+                                        </div>
+                                        <div class="value">
+                                            от 9 000 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#popup-mont" class="price-btn btn btn--green-light" data-fancybox-trigger="">
+                                    Заказать монтаж
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="polymap">
+                <div class="container">
+                    <div class="polymap__container">
+                        <div class="polymap__map">
+                            <?php echo file_get_contents(__DIR__ . '/../assets/images/polymap.svg');?>
+                        </div>
+                        <div class="polymap__info">
+                            <div class="info__item">
+                                <div class="item__title">
+                                    Доставка
+                                </div>
+                                <div class="item__list">
+                                    <div class="list__item">
+                                        <div class="item__icon">
+                                            <svg class="item-icon" viewBox="0 0 24 24" width="24" height="24">
+                                                <use href="/assets/images/sprite.svg#truck"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item__description">
+                                            Специально оборудованные автомобили для перевозок
+                                        </div>
+                                    </div>
+                                    <div class="list__item">
+                                        <div class="item__icon">
+                                            <svg class="item-icon" viewBox="0 0 24 24" width="24" height="24">
+                                                <use href="/assets/images/sprite.svg#clock"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item__description">
+                                            Быстрая доставка до вашего участка
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info__item bc-gray">
+                                <div class="item__title">
+                                    Оплата
+                                </div>
+                                <div class="item__list">
+                                    <div class="list__item">
+                                        <div class="item__icon">
+                                            <svg class="item-icon" viewBox="0 0 24 24" width="24" height="24">
+                                                <use href="/assets/images/sprite.svg#discount-label"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item__description">
+                                            Оплата при получении заказа
+                                        </div>
+                                    </div>
+                                    <div class="list__item">
+                                        <div class="item__icon">
+                                            <svg class="item-icon" viewBox="0 0 24 24" width="24" height="24">
+                                                <use href="/assets/images/sprite.svg#card"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item__description">
+                                            Наличные, карта или через терминал
+                                        </div>
+                                    </div>
+                                    <div class="list__item">
+                                        <div class="item__icon">
+                                            <svg class="item-icon" viewBox="0 0 24 24" width="24" height="24">
+                                                <use href="/assets/images/sprite.svg#best"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item__description">
+                                            Гарантия лучшей цены
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="seo-info">
+                <div class="container">
+                    <div class="seo-info__container">
+                        <div class="seo-info__title">
+                            <h2>производство и установка теплиц в Перми и по всей России</h2>
+                        </div>
+                        <div class="seo-info__content">
+                            <p>Александровский Завод Теплиц производит и устанавливает теплицы из поликарбоната, стекла и металла в Перми и по всей России. Наши конструкции подходят для дач, приусадебных участков и фермерских хозяйств. Мы предлагаем надежные теплицы с усиленным оцинкованным каркасом, устойчивые к снеговым и ветровым нагрузкам.</p>
+                            <p>Компания выпускает более <b>1000 каркасов в месяц</b> и работает с регионами по всей стране. В каталоге представлены популярные модели — <b>«AZT Люкс», «Коттедж», «Павильон»</b>, а также модульные дома, беседки и бытовки. Мы обеспечиваем полный цикл: от производства до монтажа и гарантии на продукцию.</p>
+                            <h3>Почему клиенты выбирают нас</h3>
+                            <p>Почему выбирают Александровский Завод Теплиц:</p>
+                            <ul>
+                                <li>собственное производство и контроль качества на каждом этапе;</li>
+                                <li>доставка и установка в день заказа по Перми и области;</li>
+                                <li>гарантия на каркас до 10 лет;</li>
+                                <li>гибкая система скидок и акции на сезонные модели</li>
+                            </ul>
+                            <p>Наши теплицы служат десятилетиями и помогают получать высокий урожай даже в суровых климатических условиях. Мы уверены в своем качестве — и готовы это доказать каждому клиенту</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="certificates">
                 <div class="container">
                     <div class="certificates__container">
@@ -801,6 +958,102 @@
                                             <img src="../assets/images/certificates-3.webp" alt="Теплицы из поликарбоната и стекла">
                                         </picture>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="faq">
+                <div class="container">
+                    <div class="faq__container">
+                        <div class="section__title">
+                            <h2>Все, что вы хотели спросить</h2>
+                        </div>
+                        <div class="faq-list">
+                            <div class="faq-list__item active">
+                                <div class="question">
+                                    <div class="question__container">
+                                        <div class="title">Какие теплицы вы производите?</div>
+                                        <div class="icon">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="#26AD60"/>
+                                                <path d="M10.3999 16H21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M16 10.3999V21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    Да. Мы доставляем и устанавливаем теплицы в Перми и по области. Монтаж выполняют штатные специалисты завода в день доставки.
+                                </div>
+                            </div>
+                            <div class="faq-list__item">
+                                <div class="question">
+                                    <div class="question__container">
+                                        <div class="title">Можно ли купить теплицу зимой?</div>
+                                        <div class="icon">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="#26AD60"/>
+                                                <path d="M10.3999 16H21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M16 10.3999V21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    Да. Мы доставляем и устанавливаем теплицы в Перми и по области. Монтаж выполняют штатные специалисты завода в день доставки.
+                                </div>
+                            </div>
+                            <div class="faq-list__item">
+                                <div class="question">
+                                    <div class="question__container">
+                                        <div class="title">Можно ли заказать установку теплицы “под ключ”?</div>
+                                        <div class="icon">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="#26AD60"/>
+                                                <path d="M10.3999 16H21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M16 10.3999V21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    Да. Мы доставляем и устанавливаем теплицы в Перми и по области. Монтаж выполняют штатные специалисты завода в день доставки.
+                                </div>
+                            </div>
+                            <div class="faq-list__item">
+                                <div class="question">
+                                    <div class="question__container">
+                                        <div class="title">Делаете ли вы теплицы нестандартных размеров?</div>
+                                        <div class="icon">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="#26AD60"/>
+                                                <path d="M10.3999 16H21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M16 10.3999V21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    Да. Мы доставляем и устанавливаем теплицы в Перми и по области. Монтаж выполняют штатные специалисты завода в день доставки.
+                                </div>
+                            </div>
+                            <div class="faq-list__item">
+                                <div class="question">
+                                    <div class="question__container">
+                                        <div class="title">Какая гарантия на теплицы?</div>
+                                        <div class="icon">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="#26AD60"/>
+                                                <path d="M10.3999 16H21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M16 10.3999V21.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    Да. Мы доставляем и устанавливаем теплицы в Перми и по области. Монтаж выполняют штатные специалисты завода в день доставки.
                                 </div>
                             </div>
                         </div>

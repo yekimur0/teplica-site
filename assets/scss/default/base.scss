@@ -429,3 +429,14 @@ input {
 		transform: rotate(180deg);
 	}
 }
+@keyframes pulse {
+	from{
+		transform: scale(0.95);
+	}
+	50%{
+		transform: scale(1.15);
+	}
+	to{
+		transform: scale(0.95);
+	}
+}

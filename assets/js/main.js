@@ -352,4 +352,70 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
+    if(isExist('.faq-list')){
+        let faqLists = document.querySelectorAll('.faq-list');
+        if(isExist('.faq-list__item')){
+            faqLists.forEach(list => {
+                let faqListItems = list.querySelectorAll('.faq-list__item');
+                faqListItems.forEach(item => {
+                    let answer = item.querySelector('.answer');
+                    // Вычисляем реальную высоту ответа
+                    answer.style.maxHeight = 'none';
+                    let realHeight = answer.scrollHeight;
+                    answer.style.maxHeight = '0px';
+
+                    // Если элемент уже активен при загрузке, устанавливаем высоту
+                    if(item.classList.contains('active')){
+                        answer.style.maxHeight = realHeight + 'px';
+                    }
+
+                    item.querySelector('.question').addEventListener('click', (e)=>{
+                        let clickedItem = e.target.closest('.faq-list__item');
+                        let clickedAnswer = clickedItem.querySelector('.answer');
+                        let isActive = clickedItem.classList.contains('active');
+
+                        faqListItems.forEach(currentListItem=>{
+                            let currentAnswer = currentListItem.querySelector('.answer');
+                            currentListItem.classList.remove('active');
+                            currentAnswer.style.maxHeight = '0px';
+                        })
+
+                        if(!isActive){
+                            clickedItem.classList.add('active');
+                            // Вычисляем высоту для кликнутого элемента
+                            clickedAnswer.style.maxHeight = 'none';
+                            let clickedRealHeight = clickedAnswer.scrollHeight;
+                            clickedAnswer.style.maxHeight = '0px';
+                            setTimeout(() => {
+                                clickedAnswer.style.maxHeight = clickedRealHeight + 'px';
+                            }, 10);
+                        }
+                    })
+                });
+            });
+        }
+    }
+    if(isExist('.catalog-controls-swiper')){
+        let allCatalogControls = document.querySelectorAll('.catalog-controls-swiper');
+        allCatalogControls.forEach(controls => {
+            new Swiper(controls, {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+                slidesPerView: 1.25,
+                spaceBetween: 20,
+                breakpoints: {
+                    991: {
+                        slidesPerView: 3.5,
+                    },
+                    1200: {
+                        slidesPerView: 3.5,
+                    },
+                    1600: {
+                        slidesPerView: 5,
+                    }
+                },
+            })
+        });
+    }
 })
