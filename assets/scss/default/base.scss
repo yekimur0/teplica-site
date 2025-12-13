@@ -277,6 +277,7 @@ input {
 
 	.video__placeholder {
 		position: relative;
+		height: 100%;
 
 		.placeholder__play {
 			position: absolute;
@@ -302,6 +303,12 @@ input {
 					background-color: $t-zelenyy;
 				}
 			}
+		}
+		picture, img{
+			width: 100%;
+			object-fit: cover;
+			height: 100%;
+			display: block;
 		}
 	}
 }
@@ -402,6 +409,9 @@ input {
 	align-items: center;
 	gap: 8px;
 	margin-top: auto;
+	@include laptop{
+		padding: 20px 0;
+	}
 	span{
 		font-family: $font-family;
 		font-weight: 400;
@@ -427,6 +437,27 @@ input {
 .arrow{
 	&-right{
 		transform: rotate(180deg);
+	}
+}
+.table{
+	overflow-x: auto;
+	overflow-y: clip;
+	table{
+		width: 100%;
+		tr{
+			width: 100%;
+			background-color: transparent;
+			transition: $transition;
+			&:nth-child(odd){
+				background-color: $sv-seryy;
+			}
+			&:hover{
+				background-color: #ddd;
+			}
+			td{
+				padding: 10px 20px;
+			}
+		}
 	}
 }
 @keyframes pulse {

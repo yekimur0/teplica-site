@@ -1,0 +1,275 @@
+@use "../default/mixins" as *;
+@use "../variables" as *;
+
+.aboutus{
+    .hero{
+        &__container{
+            .section__title{
+                @include laptop{
+                    padding: 0;
+                }
+            }
+        }
+        &__main{
+            .main__text{
+                padding: 0;
+            }
+            .about__video{
+                height: 370px;
+                @include laptop{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .info-blocks{
+        padding: 40px 0;
+        @include laptop{
+            padding: 30px 0;
+        }
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            @include laptop{
+                grid-template-columns: 1fr;
+            }
+            .item{
+                display: flex;
+                gap: 10px;
+                @include laptop{
+                    flex-direction: column;
+                }
+                .image{
+                    flex: 0 0 40%;
+                    width: 100%;
+                    height: 100%;
+                    @include laptop{
+                        flex: 1 1 100%;
+                    }
+                    img, picture{
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .text{
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                    background: $t-zelenyy;
+                    border-radius: 8px;
+                    .title{
+                        font-family: $second-family;
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: $belyy;
+                    }
+                    .description{
+                        font-family: $font-family;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 130%;
+                        color: $belyy;
+                    }
+                }
+                &:nth-child(2), &:nth-child(3){
+                    flex-direction: row-reverse;
+                    @include laptop{
+                        flex-direction: column;
+                    }
+                    .text{
+                        background: $sv-seryy;
+                        .title, .description{
+                            color: $chernyy;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .history{
+        background: #12281c;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 0;
+        margin: 40px 0;
+        @include laptop{
+            padding: 30px 0;
+            margin: 30px 0;
+        }
+        .slider__buttons{
+            position: relative;
+            width: 100px;
+            margin-bottom: 25px;
+            @include laptop{
+                position: absolute;
+                margin-right: 0;
+                right: 0px;
+                bottom: 0;
+                margin-bottom: -30px;
+            }
+            .swiper-button-next, .swiper-button-prev{
+                border-radius: 1000px;
+                padding-block: 8px;
+                padding-inline: 10px;
+                background: $sv-seryy;
+                transition: $transition;
+                &:hover{
+                    background-color: $t-zelenyy;
+                    .swiper-navigation-icon{
+                        path{
+                            fill: $belyy;
+                        }
+                    }
+                }
+                .swiper-navigation-icon{
+                    path{
+                        fill: $chernyy;
+                    }
+                }
+                &.swiper-button-disabled{
+                    pointer-events: none;
+                    opacity: .3;
+                    background: $sv-seryy;
+                    .swiper-navigation-icon{
+                        path{
+                            fill: $chernyy;
+                        }
+                    }
+                }
+            }
+            .swiper-button-prev{
+                svg{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .container{
+            position: relative;
+            z-index: 1;
+        }
+        &__slider-container{
+            display: flex;
+            gap: 120px;
+            @include laptop{
+                flex-direction: column;
+                gap: 54px;
+            }
+        }
+        &__bg{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: .3;
+            z-index: 0;
+            @include laptop{
+                top: 80px;
+            }
+            img, picture{
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &__title{
+            font-family: $second-family;
+            font-weight: 600;
+            font-size: 34px;
+            text-transform: uppercase;
+            color: $belyy;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include laptop{
+                font-size: 26px;
+                br{
+                    display: none;
+                }
+            }
+            h2{
+                font-family: $second-family;
+                font-weight: 600;
+                font-size: 34px;
+                text-transform: uppercase;
+                color: $belyy;
+                line-height: 1;
+                @include laptop{
+                    font-size: 26px;
+                    br{
+                        display: none;
+                    }
+                }
+            }
+            .controls{
+                position: relative;
+                z-index: 1;
+            }
+        }
+        &__slider{
+            width: 100%;
+            .swiper-slide{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                width: 33.33333%;
+                flex: 0 0 33.33333%;
+                border-left: 1px solid $seryy-tekst;
+                padding: 0 20px;
+                height: fit-content;
+                @include laptop{
+                    width: unset;
+                    flex: 0 0 100%;
+                    padding: 0;
+                    border: unset;
+                }
+                &:nth-child(4), &:nth-child(5){
+                    width: 50%;
+                    flex: 0 0 50%;
+                    @include laptop{
+                        width: unset;
+                        flex: 0 0 100%;
+                    }
+                }
+                .number{
+                    font-family: $second-family;
+                    font-weight: 600;
+                    font-size: 44px;
+                    text-transform: uppercase;
+                    color: $sv-seryy;
+                }
+                .text{
+                    font-family: $font-family;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: $belyy;
+                }
+            }
+        }
+    }
+    .reviews{
+        padding: 40px 0;
+        @include laptop{
+            padding: 30px 0;
+        }
+        picture, img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+    .requisites{
+        padding: 40px 0;
+        @include laptop{
+            padding: 30px 0;
+        }
+    }
+}

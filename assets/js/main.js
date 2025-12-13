@@ -418,4 +418,33 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
+    if(isExist('.history__slider')){
+        let slider = document.querySelector('.history__slider');
+        let nextButton = slider.closest('.history__container').querySelector('.history__controls .swiper-button-next');
+        let prevButton = slider.closest('.history__container').querySelector('.history__controls .swiper-button-prev');
+        const historySlider = new Swiper(slider, {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints:{
+                425: {
+                    sliderPerView: 1,
+                },
+                991: {
+                    slidesPerView: 1,
+                },
+                1200: {
+                    slidesPerView: 'auto',
+                },
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: nextButton,
+                prevEl: prevButton,
+            },
+        })
+    }
 })
