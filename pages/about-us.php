@@ -8,21 +8,21 @@
     </head>
     <body>
         <main class="content aboutus">
-            <section class="breacrumbs">
+            <section class="breadcrumbs">
                 <div class="container">
                     <div class="text__breadcrumbs breadcrumbs">
                         <a href="/" class="breadcrumbs-link">Главная</a>
                         <span class="separator">/</span>
                         <span class="current">О компании</span>
                     </div>
+                    <div class="section__title">
+                        <h1>О компании</h1>
+                    </div>
                 </div>
             </section>
             <section class="hero">
                 <div class="container">
                     <div class="hero__container">
-                        <div class="section__title">
-                            <h1>О компании</h1>
-                        </div>
                         <div class="hero__main">
                             <div class="main__text bc-transparent">
                                 <p>Александровский завод теплиц — это надежная компания, успешно работающая на рынке с 2014 года. С момента основания занимается производством каркасов теплиц, предлагая качественные и долговечные решения для садоводов и фермеров.</p>

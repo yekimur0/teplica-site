@@ -433,6 +433,12 @@ input {
 			opacity: .5;
 		}
 	}
+	.section__title{
+		padding-top: 30px;
+		@include laptop{
+			padding: 0;
+		}
+	}
 }
 .arrow{
 	&-right{
