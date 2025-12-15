@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>О компании</title>
+        <title>Контакты</title>
         <?php include '../blocks/header.php';?>
     </head>
     <body>
@@ -13,7 +13,7 @@
                     <div class="text__breadcrumbs breadcrumbs">
                         <a href="/" class="breadcrumbs-link">Главная</a>
                         <span class="separator">/</span>
-                        <span class="current">О компании</span>
+                        <span class="current">Контакты</span>
                     </div>
                     <div class="section__title">
                         <h1>Контакты</h1>

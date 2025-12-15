@@ -118,6 +118,13 @@ body {
 			background-color: $zelenyy;
 			color: $belyy;
 		}
+		&--dark-active{
+			&.active{
+				background-color: $t-zelenyy;
+				border: 1px solid $t-zelenyy;
+				color: $belyy;
+			}
+		}
 	}
 
 	&--green-light {
@@ -436,7 +443,7 @@ input {
 	.section__title{
 		padding-top: 30px;
 		@include laptop{
-			padding: 0;
+			padding: 0 0 10px 0;
 		}
 	}
 }
@@ -462,6 +469,25 @@ input {
 			}
 			td{
 				padding: 10px 20px;
+			}
+		}
+	}
+}
+.separated-content{
+	&__container{
+		display: grid;
+		grid-template-columns: .35fr 1fr;
+		gap: 40px;
+		@include tablet{
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+		.aside{
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			.item{
+				width: 100%;
 			}
 		}
 	}

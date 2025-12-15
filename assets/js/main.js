@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
             search: "Напишите для поиска...",
         }
     });
+    tail.select('select#theme-select', {
+        strings: {
+            all: "Все",
+            none: "Ничего",
+            placeholder: "Тема отзыва",
+            search: "Напишите для поиска...",
+        }
+    });
     if(isExist('.hits-swiper')){
         const hitsSwiper = new Swiper('.hits-swiper', {
             // Optional parameters
@@ -447,4 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         })
     }
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
 })
