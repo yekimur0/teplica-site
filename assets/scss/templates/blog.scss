@@ -1,0 +1,106 @@
+@use "../default/mixins" as *;
+@use "../variables" as *;
+
+
+.blog-page{
+    &-list{
+        padding: 0 0 40px 0;
+        @include laptop{
+            padding: 0 0 30px 0;
+        }
+        .categories{
+            justify-content: flex-start;
+            padding-bottom: 20px;
+            flex-wrap: wrap;
+            @include tablet{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .btn{
+                    width: 100%;
+                    padding-inline: 10px;
+                }
+            }
+        }
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            @include laptop{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include tablet{
+                grid-template-columns: 1fr;
+            }
+        }
+        .blog__item{
+            box-shadow: unset;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            .item{
+                &__image{
+                    border-radius: 8px;
+                    overflow: hidden;
+                    img, picture{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-fit: cover;
+                    }
+                }
+                &__info{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    align-items: center;
+                    .info{
+                        &__category{
+                            background: rgba(38, 173, 96, 0.1);
+                            border-radius: 4px;
+                            padding-block: 4px;
+                            padding-inline: 8px;
+                            font-family: $font-family;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 120%;
+                            color: $chernyy;
+                        }
+                        &__date{
+                            font-family: $font-family;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 120%;
+                            color: $chernyy;
+                        }
+                    }
+                }
+                &__text{
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    h3{
+                        line-height: 1;
+                    }
+                    p{
+                        font-family: $font-family;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: $chernyy;
+                        overflow: hidden;
+                        line-clamp: 3;
+                        -webkit-line-clamp: 3;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+        .pagination{
+            padding-top: 60px;
+        }
+    }
+}

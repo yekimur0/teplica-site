@@ -408,8 +408,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog-pagination">
-                            <div class="catalog-pagination__pagination">
+                        <div class="pagination">
+                            <div class="pagination__pagination">
                                 <a href="/" class="pagination-control control-prev">
                                     <svg class="item-icon arrow arrow-left" viewBox="0 0 15 20" width="15" height="20">
                                         <use href="/assets/images/sprite.svg#arrow"></use>

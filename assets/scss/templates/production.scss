@@ -198,67 +198,6 @@
                 }
             }
         }
-        &-pagination{
-            width: 100%;
-            padding-top: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            &__pagination{
-                display: flex;
-                gap: 4px;
-                .pagination-control{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    background-color: $sv-seryy;
-                    transition: $transition;
-                    svg{
-                        transition: $transition;
-                    }
-                    &:hover{
-                        background-color: $t-zelenyy;
-                        svg{
-                            fill: $belyy;
-                            color: $belyy;
-                        }
-                    }
-                }
-                .pagination-list{
-                    display: flex;
-                    gap: 4px;
-                    &__item{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 40px;
-                        height: 40px;
-                        background: unset;
-                        font-family: $second-family;
-                        font-weight: 600;
-                        font-size: 18px;
-                        text-align: center;
-                        color: $chernyy;
-                        border-radius: 50%;
-                        transition: $transition;
-                        &:hover{
-                            background-color: $zelenyy;
-                            color: $belyy;
-                        }
-                        &.current{
-                            background: $t-zelenyy;
-                            color: $belyy;
-                            pointer-events: none;
-                        }
-                    }
-                }
-            }
-        }
     }
     .advantages{
         padding: 40px 0;
@@ -672,6 +611,67 @@
     .contacts-block{
         @include tablet{
             margin-top: 30px;
+        }
+    }
+}
+.pagination{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    &__pagination{
+        display: flex;
+        gap: 4px;
+        .pagination-control{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $sv-seryy;
+            transition: $transition;
+            svg{
+                transition: $transition;
+            }
+            &:hover{
+                background-color: $t-zelenyy;
+                svg{
+                    fill: $belyy;
+                    color: $belyy;
+                }
+            }
+        }
+        .pagination-list{
+            display: flex;
+            gap: 4px;
+            &__item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                background: unset;
+                font-family: $second-family;
+                font-weight: 600;
+                font-size: 18px;
+                text-align: center;
+                color: $chernyy;
+                border-radius: 50%;
+                transition: $transition;
+                &:hover{
+                    background-color: $zelenyy;
+                    color: $belyy;
+                }
+                &.current{
+                    background: $t-zelenyy;
+                    color: $belyy;
+                    pointer-events: none;
+                }
+            }
         }
     }
 }
