@@ -237,6 +237,113 @@
                     </div>
                 </div>
             </section>
+            <section class="whychooseus">
+                <div class="container">
+                    <div class="whychooseus__container">
+                        <div class="section__title">
+                            <h2>Реквизиты</h2>
+                        </div>
+                        <div class="whychooseus__list">
+                            <div class="item">
+                                <div class="title">
+                                    <div class="icon">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/whychooseus-1.webp">
+                                            <img src="../assets/images/whychooseus-1.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="text">
+                                        Собственное производство
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    Все теплицы выпускаются на нашем заводе. Контроль качества на каждом этапе и гарантия соответствия стандартам
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    <div class="icon">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/whychooseus-2.webp">
+                                            <img src="../assets/images/whychooseus-2.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="text">
+                                        Прочные каркасы
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    Используем оцинкованный профиль повышенной прочности. Конструкции выдерживают снеговые и ветровые нагрузки
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    <div class="icon">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/whychooseus-3.webp">
+                                            <img src="../assets/images/whychooseus-3.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="text">
+                                        Доставка и монтаж под ключ
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    Привезем, соберем и установим теплицу на участке в день доставки. Вам не нужно искать установщиков
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    <div class="icon">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/whychooseus-4.webp">
+                                            <img src="../assets/images/whychooseus-4.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="text">
+                                        Опыт с 2014 года
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    Мы работаем на рынке более 10 лет, знаем все нюансы выбора и установки теплиц в российских климатических условиях
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    <div class="icon">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/whychooseus-5.webp">
+                                            <img src="../assets/images/whychooseus-5.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="text">
+                                        Индивидуальные решения
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    Изготавливаем теплицы любых размеров и форм по вашим параметрам. Подберём оптимальный вариант под участок
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    <div class="icon">
+                                        <picture>
+                                            <source media="(max-width: 1200px)" srcset="../assets/images/whychooseus-6.webp">
+                                            <img src="../assets/images/whychooseus-6.webp" alt="Теплицы из поликарбоната и стекла">
+                                        </picture>
+                                    </div>
+                                    <div class="text">
+                                        Официальная гарантия
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    Даём официальную гарантию на каркас и материалы. Срок службы теплиц — более 15 лет при правильном уходе
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="reviews">
                 <div class="container">
                     <div class="reviews__container">
@@ -249,6 +356,64 @@
                                 <img src="../assets/images/reviews-1.webp" alt="Теплицы из поликарбоната и стекла">
                             </picture>
                         </div>
+                        <div class="reviews__list">
+                            <div class="item">
+                                <div class="title">
+                                    <div class="name">Васильева Анна</div>
+                                    <div class="date">01.01.2024</div>
+                                </div>
+                                <div class="content">
+                                    <p>И нет сомнений, что явные признаки победы институционализации формируют глобальную экономическую сеть и при этом —  объединены в целые кластеры себе подобных. И нет сомнений, что стремящиеся вытеснить традиционное производство, нанотехнологии формируют глобальную экономическую сеть и при этом —  заблокированы в рамках своих собственных рациональных ограничений.</p>
+                                    <p>Ясность нашей позиции очевидна: убеждённость некоторых оппонентов не оставляет шанса для системы обучения кадров, соответствующей насущным потребностям. Господа, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовке и реализации инновационных методов управления процессами.</p>
+                                </div>
+                                <div class="files">
+                                    <div class="file btn btn--transparent">
+                                        <div class="icon">
+                                            <picture>
+                                                <source media="(max-width: 1200px)" srcset="../assets/images/file-1.webp">
+                                                <img src="../assets/images/file-1.webp" alt="Теплицы из поликарбоната и стекла">
+                                            </picture>
+                                        </div>
+                                        <div class="text">
+                                            Благодарственное письмо ООО “Ветер”
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    <div class="name">Васильева Анна</div>
+                                    <div class="date">01.01.2024</div>
+                                </div>
+                                <div class="content">
+                                    <p>И нет сомнений, что явные признаки победы институционализации формируют глобальную экономическую сеть и при этом —  объединены в целые кластеры себе подобных. И нет сомнений, что стремящиеся вытеснить традиционное производство, нанотехнологии формируют глобальную экономическую сеть и при этом —  заблокированы в рамках своих собственных рациональных ограничений.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    <div class="name">Васильева Анна</div>
+                                    <div class="date">01.01.2024</div>
+                                </div>
+                                <div class="content">
+                                    <p>И нет сомнений, что явные признаки победы институционализации формируют глобальную экономическую сеть и при этом —  объединены в целые кластеры себе подобных. И нет сомнений, что стремящиеся вытеснить традиционное производство, нанотехнологии формируют глобальную экономическую сеть и при этом —  заблокированы в рамках своих собственных рациональных ограничений.</p>
+                                    <p>Ясность нашей позиции очевидна: убеждённость некоторых оппонентов не оставляет шанса для системы обучения кадров, соответствующей насущным потребностям. Господа, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовке и реализации инновационных методов управления процессами.</p>
+                                </div>
+                                <div class="files">
+                                    <div class="file btn btn--transparent">
+                                        <div class="icon">
+                                            <picture>
+                                                <source media="(max-width: 1200px)" srcset="../assets/images/file-1.webp">
+                                                <img src="../assets/images/file-1.webp" alt="Теплицы из поликарбоната и стекла">
+                                            </picture>
+                                        </div>
+                                        <div class="text">
+                                            Благодарственное письмо ООО “Ветер”
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__loadmore btn btn--transparent">Показать еще</div>
                     </div>
                 </div>
             </section>
