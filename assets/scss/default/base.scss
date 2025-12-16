@@ -416,9 +416,6 @@ input {
 	align-items: center;
 	gap: 8px;
 	margin-top: auto;
-	@include laptop{
-		padding: 0 0 20px 0;
-	}
 	span{
 		font-family: $font-family;
 		font-weight: 400;
@@ -444,6 +441,11 @@ input {
 		padding-top: 30px;
 		@include laptop{
 			padding: 0 0 10px 0;
+		}
+	}
+	.text__breadcrumbs{
+		@include laptop{
+			padding: 0 0 20px 0;
 		}
 	}
 }

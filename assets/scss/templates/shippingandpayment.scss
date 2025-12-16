@@ -1,0 +1,94 @@
+@use "../default/mixins" as *;
+@use "../variables" as *;
+
+.shippingandpayment{
+    .info{
+        padding: 0 0 40px 0;
+        @include laptop{
+            padding: 0 0 30px 0;
+        }
+        &+.info{
+            padding-top: 0;
+        }
+        &__container{
+            padding: 40px;
+            border-radius: 16px;
+            @include laptop{
+                padding: 20px 10px;
+            }
+        }
+        &.tabs{
+            .tabs{
+                &__controls{
+                    display: flex;
+                    gap: 4px;
+                    @include tablet{
+                        flex-wrap: wrap;
+                    }
+                }
+                &__control{
+                    @include tablet{
+                        flex: 1 1 49%;
+                        padding-inline: 10px;
+                    }
+                    &:first-child{
+                        @include tablet{
+                            flex: 1 1 100%;
+                        }
+                    }
+                }
+                &__tab{
+                    padding: 20px 0;
+                }
+            }
+        }
+        ul{
+            padding-left: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            li{
+                display: list-item;
+                list-style: disc;
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                color: $chernyy;
+                &::marker{
+                    font-size: 24px;
+                    color: $zelenyy;
+                }
+                span{
+                    display: block;
+                    font-weight: bold;
+                    padding-bottom: 8px;
+                }
+                a{
+                    font-family: $font-family;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                    color: $t-zelenyy;
+                    transition: $transition;
+                    &:hover{
+                        text-decoration: unset;
+                    }
+                }
+            }
+        }
+    }
+    .whychooseus{
+        padding: 40px 0;
+        @include laptop{
+            padding: 30px 0;
+        }
+    }
+    .contacts-block{
+        @include laptop{
+            padding-top: 30px;
+        }
+    }
+}

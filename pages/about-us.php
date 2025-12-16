@@ -241,7 +241,7 @@
                 <div class="container">
                     <div class="whychooseus__container">
                         <div class="section__title">
-                            <h2>Реквизиты</h2>
+                            <h2>Почему выбирают нас</h2>
                         </div>
                         <div class="whychooseus__list">
                             <div class="item">

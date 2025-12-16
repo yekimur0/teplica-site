@@ -1,0 +1,9 @@
+# Large video files
+assets/images/single-portfolio-video.mp4
+
+# Node modules
+node_modules/
+
+# Build files
+*.map
+

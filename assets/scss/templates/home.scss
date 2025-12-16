@@ -561,6 +561,18 @@
         }
     }
 }
+#popup-comment{
+    .form{
+        &__fieldset{
+            &.row{
+                &+.form__fieldset{
+                    margin-top: -10px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
 .consult{
     padding: 40px 0;
     @include laptop{
@@ -689,6 +701,19 @@
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+                &.row{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    @include tablet{
+                        grid-template-columns: 1fr;
+                    }
+                    &+.row{
+                        margin-top: -10px;
+                    }
+                    &+.form__fieldset{
+                        margin-bottom: -10px;
+                    }
+                }
                 .submit__acceptance{
                     display: flex;
                     flex-direction: row;
@@ -784,6 +809,9 @@
                 display: block;
                 @include laptop{
                     height: 350px;
+                }
+                @include tablet{
+                    height: 250px;
                 }
                 img, picture{
                     display: block;

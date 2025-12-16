@@ -269,3 +269,54 @@
         </div>
     </div>
 </div>
+<div id="popup-comment" data-fancybox class="popup popup-consult" style="display: none;">
+    <div class="consult popup">
+        <div class="consult__container">
+            <div class="consult__form">
+                <div class="form__header">
+                    <h2>
+                        Напишите свой комментарий к статье
+                    </h2>
+                    <p>
+                        Сразу после прохождения модерации Ваш комментарий появится на сайте
+                    </p>
+                </div>
+                <form class="form">
+                    <div class="form__fieldset row">
+                        <div class="form__field">
+                            <div class="field">
+                                <input type="text" name="name" id="consult-form-name" required placeholder="Имя*">
+                            </div>
+                            <div class="error"></div>
+                        </div>
+                        <div class="form__field">
+                            <div class="field">
+                                <input type="text" name="phone" required id="consult-form-phone" placeholder="Телефон*">
+                            </div>
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="form__fieldset">
+                        <div class="form__field">
+                            <div class="field">
+                                <textarea type="text" name="comment" id="consult-form-comment" required placeholder="Текст отзыва*"></textarea>
+                            </div>
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="form__submit row">
+                        <div class="submit__acceptance">
+                            <input type="checkbox" name="acceptance" required id="consult-form-acceptance">
+                            <div class="acceptance__text">
+                                Отправляя данные вы соглашаетесь с <a href="/policy">политикой конфиденциальности</a>
+                            </div>
+                        </div>
+                        <div class="submit__btn">
+                            <button type="submit" class="btn btn--green-light btn--transparent-hover-white">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

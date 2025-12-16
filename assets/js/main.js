@@ -76,9 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
-            slidesPerView: 1,
+            slidesPerView: 1.05,
             spaceBetween: 20,
             breakpoints: {
+                350:{
+                    slidesPerView: 1.05,
+                },
+                490:{
+                    slidesPerView: 2,
+                },
                 991: {
                     slidesPerView: 2,
                 },
@@ -146,6 +152,36 @@ document.addEventListener('DOMContentLoaded', () => {
                     nextEl: nextButton,
                     prevEl: prevButton,
                 },
+            })
+        });
+
+    }
+    if(isExist('.images-slider')){
+        let sliders = document.querySelectorAll('.images-slider');
+        sliders.forEach(slider => {
+            let slider_container = slider;
+            slider_container.id = `slider${Math.floor(Math.random() * (0 - 999999)) + 0}`;
+
+            new Swiper(slider, {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+                slidesPerView: 1.05,
+                breakpoints: {
+                    425: {
+                        slidesPerView: 1.05,
+                        spaceBetween: 10,
+                    },
+                    991: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                },
+                spaceBetween: 10,
             })
         });
 
@@ -452,6 +488,35 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
                 nextEl: nextButton,
                 prevEl: prevButton,
+            },
+        })
+    }
+    if(isExist('.other__slider')){
+        let slider = document.querySelector('.other__slider');
+        let nextButton = slider.closest('.other__container').querySelector('.slider__buttons .swiper-button-next');
+        let prevButton = slider.closest('.other__container').querySelector('.slider__buttons .swiper-button-prev');
+        const otherSlider = new Swiper(slider, {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints:{
+                425: {
+                    slidesPerView: 1,
+                },
+                991: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: prevButton,
+                prevEl: nextButton,
             },
         })
     }

@@ -266,68 +266,6 @@
             }
         }
     }
-    .whychooseus{
-        &__list{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            @include laptop-big__1600{
-                grid-template-columns: repeat(2, 1fr);
-            }
-            @include tablet{
-                grid-template-columns: 1fr;
-            }
-            .item{
-                padding: 20px;
-                border-radius: 8px;
-                background: $sv-seryy;
-                display: flex;
-                flex-direction: column;
-                gap: 14px;
-                &:first-child, &:last-child{
-                    background: $t-zelenyy;
-                    .title{
-                        .text{
-                            color: $belyy;
-                        }
-                    }
-                    .description{
-                        color: $belyy;
-                    }
-                }
-                .title{
-                    display: flex;
-                    gap: 14px;
-                    align-items: center;
-                    .icon{
-                        picture, img{
-                            width: 60px;
-                            height: 60px;
-                            object-fit: contain;
-                            display: block;
-                            @include tablet{
-                                width: 40px;
-                                height: 40px;
-                            }
-                        }
-                    }
-                    .text{
-                        font-family: $second-family;
-                        font-weight: 600;
-                        font-size: 18px;
-                        color: $chernyy;
-                    }
-                }
-                .description{
-                    font-family: $font-family;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 130%;
-                    color: $chernyy;
-                }
-            }
-        }
-    }
     .reviews{
         padding: 40px 0;
         @include laptop{
@@ -452,6 +390,68 @@
                         font-weight: bold;
                     }
                 }
+            }
+        }
+    }
+}
+.whychooseus{
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        @include laptop-big__1600{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include tablet{
+            grid-template-columns: 1fr;
+        }
+        .item{
+            padding: 20px;
+            border-radius: 8px;
+            background: $sv-seryy;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            &:first-child, &:last-child{
+                background: $t-zelenyy;
+                .title{
+                    .text{
+                        color: $belyy;
+                    }
+                }
+                .description{
+                    color: $belyy;
+                }
+            }
+            .title{
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                .icon{
+                    picture, img{
+                        width: 60px;
+                        height: 60px;
+                        object-fit: contain;
+                        display: block;
+                        @include tablet{
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+                .text{
+                    font-family: $second-family;
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: $chernyy;
+                }
+            }
+            .description{
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                color: $chernyy;
             }
         }
     }
